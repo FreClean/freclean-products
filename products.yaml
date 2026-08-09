@@ -1,0 +1,78 @@
+# FreClean Product Catalog
+#
+# This file is the source of truth for FreClean's product data. freclean-api
+# and freclean-website should read from (or be seeded from) this file rather
+# than duplicating product facts. Validate with `npm run validate` before
+# merging any change — see scripts/validate-catalog.ts.
+#
+# lifecycleStatus meanings:
+#   development   — formulation/design in progress, not yet produced
+#   prototype     — a working sample exists, not yet sold
+#   available     — verified in stock and sold to customers
+#   discontinued  — no longer produced or sold
+#   planned       — intended for the future, not started
+
+- sku: "Not yet available"
+  name: "FreClean Multi-Surface Cleaner"
+  description: "A multi-surface cleaning spray formulated for tropical households and businesses."
+  category: cleaning
+  lifecycleStatus: development
+  sizes:
+    - value: 400
+      unit: ml
+    - value: 750
+      unit: ml
+  madeIn: Haiti
+  ingredients: "Not yet available"
+  safety:
+    hazardStatements: []
+    sdsStatus: not_started
+    sdsUrl: null
+  packaging: "Trigger-spray bottle (750ml), flip-top bottle (400ml). Final packaging spec: in development."
+  manufacturingStatus: formulation
+  batch:
+    batchTrackingEnabled: false
+    currentBatchId: null
+  supplier:
+    name: "Not provided"
+    status: not_provided
+  pricing:
+    retailPrice: null
+    wholesalePrice: null
+    currency: USD
+    cost: null
+  storage: "Store in a cool, dry place out of direct sunlight. Full storage guidance: in development."
+  images:
+    - assets/img/multi-surface-750ml-lifestyle.png
+    - assets/img/multi-surface-750ml-detail.png
+    - assets/img/multi-surface-400ml.png
+
+- sku: "Not yet available"
+  name: "FreClean Fragrance Line"
+  description: "Planned fragrance product line, alongside the cleaning line."
+  category: fragrance
+  lifecycleStatus: planned
+  sizes:
+    - value: 100
+      unit: ml
+  madeIn: Haiti
+  ingredients: "Not yet available"
+  safety:
+    hazardStatements: []
+    sdsStatus: not_started
+    sdsUrl: null
+  packaging: "Not yet available"
+  manufacturingStatus: not_started
+  batch:
+    batchTrackingEnabled: false
+    currentBatchId: null
+  supplier:
+    name: "Not provided"
+    status: not_provided
+  pricing:
+    retailPrice: null
+    wholesalePrice: null
+    currency: USD
+    cost: null
+  storage: "Not yet available"
+  images: []

@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://freclean.com/schema/product.schema.json",
+  "title": "FreClean Product",
+  "type": "object",
+  "required": ["sku", "name", "category", "lifecycleStatus", "sizes", "madeIn"],
+  "additionalProperties": false,
+  "properties": {
+    "sku": {
+      "type": "string",
+      "description": "Stock keeping unit. Use 'Not yet available' if not assigned.",
+      "minLength": 1
+    },
+    "name": { "type": "string", "minLength": 2 },
+    "description": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["cleaning", "household", "fragrance", "professional"]
+    },
+    "lifecycleStatus": {
+      "type": "string",
+      "enum": ["development", "prototype", "available", "discontinued", "planned"],
+      "description": "Must never be 'available' unless commercial availability has been verified."
+    },
+    "sizes": {
+      "type": "array",
+      "items": { "type": "object", "required": ["value", "unit"], "properties": {
+        "value": { "type": "number", "exclusiveMinimum": 0 },
+        "unit": { "type": "string", "enum": ["ml", "l", "g", "kg", "oz"] }
+      } },
+      "minItems": 1
+    },
+    "madeIn": { "type": "string", "minLength": 2 },
+    "ingredients": {
+      "type": ["array", "string"],
+      "description": "Array of ingredient names, or the literal string 'Not yet available'."
+    },
+    "safety": {
+      "type": "object",
+      "properties": {
+        "hazardStatements": { "type": "array", "items": { "type": "string" } },
+        "sdsStatus": { "type": "string", "enum": ["not_started", "draft", "published"] },
+        "sdsUrl": { "type": ["string", "null"] }
+      }
+    },
+    "packaging": { "type": "string" },
+    "manufacturingStatus": {
+      "type": "string",
+      "enum": ["not_started", "formulation", "pilot_batch", "in_production", "paused"]
+    },
+    "batch": {
+      "type": "object",
+      "properties": {
+        "batchTrackingEnabled": { "type": "boolean" },
+        "currentBatchId": { "type": ["string", "null"] }
+      }
+    },
+    "supplier": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "status": { "type": "string", "enum": ["not_provided", "approved", "pending_approval"] }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "retailPrice": { "type": ["number", "null"] },
+        "wholesalePrice": { "type": ["number", "null"] },
+        "currency": { "type": "string", "default": "USD" },
+        "cost": { "type": ["number", "null"] }
+      }
+    },
+    "storage": { "type": "string" },
+    "images": { "type": "array", "items": { "type": "string" } }
+  }
+}
