@@ -15,16 +15,16 @@ Every FreClean product label must include:
 - Net contents (size + unit)
 - "Made in Haiti"
 - Category (e.g. "Multi-Surface Cleaner")
-- Hazard statements, once the SDS is published (see `SDS-TEMPLATE.md`) — never omit required hazard language once ingredients are finalized
-- Batch/lot code, once batch tracking is enabled (see `catalog/products.yaml` → `batch.batchTrackingEnabled`)
+- Hazard statements, once the SDS is published (see `SDS-TEMPLATE.md`); never omit required hazard language once ingredients are finalized.
+- Batch/lot code, once batch tracking is enabled (see `products.yaml` → `batch.batchTrackingEnabled`)
 - Contact information: freclean7@gmail.com
 
 ## What not to do
 
-- Do not print a barcode/SKU on packaging until that SKU is finalized in `catalog/products.yaml`.
-- Do not print "Available at retailers" language until `lifecycleStatus: available` is set and validated (see `docs/PRODUCT-LIFECYCLE.md`).
+- Do not print a barcode/SKU on packaging until that SKU is finalized in `products.yaml`.
+- Do not print "Available at retailers" language until `lifecycleStatus: available` is set and validated (see `PRODUCT-LIFECYCLE.md`).
 - Do not print ingredient claims not yet confirmed in the SDS.
 
 ## Sustainability
 
-Packaging material choice (recyclability, refill options) is not yet finalized — track decisions here once made rather than in marketing copy.
+Packaging material choice (recyclability, refill options) is not yet finalized; track decisions here once made rather than in marketing copy.

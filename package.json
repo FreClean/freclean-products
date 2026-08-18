@@ -1,11 +1,11 @@
 {
   "name": "freclean-products",
   "version": "0.1.0",
-  "description": "FreClean's canonical product catalog data, schema, and validation — the source of truth for freclean-api and freclean-website.",
+  "description": "FreClean's canonical product catalog data, schema, and validation; the source of truth for freclean-api and freclean-website.",
   "private": true,
   "scripts": {
-    "validate": "ts-node scripts/validate-catalog.ts",
-    "lint": "eslint \"scripts/**/*.ts\"",
+    "validate": "ts-node validate-catalog.ts",
+    "lint": "eslint \"*.ts\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

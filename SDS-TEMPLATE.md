@@ -1,6 +1,6 @@
 # Safety Data Sheet (SDS) Template
 
-Use this template for every FreClean product before it can move to `lifecycleStatus: available`. Copy it into `docs/sds/<sku>.md` per product once ingredients are finalized. Do not publish a filled-in SDS with placeholder or estimated data — leave a section as `Not yet available` rather than guessing.
+Use this template for every FreClean product before it can move to `lifecycleStatus: available`. Copy it into `docs/sds/<sku>.md` per product once ingredients are finalized. Do not publish a filled-in SDS with placeholder or estimated data; leave a section as `Not yet available` rather than guessing.
 
 ## 1. Identification
 - Product name:
